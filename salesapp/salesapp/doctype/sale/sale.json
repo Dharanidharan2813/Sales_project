@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ORD-.####",
+ "creation": "2025-07-10 12:39:02.065063",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_bpbq",
+  "shop_name",
+  "column_break_fmhv",
+  "column_break_tcea",
+  "section_break_qglu",
+  "amended_from",
+  "customer",
+  "column_break_wcmo",
+  "customer_phone",
+  "column_break_ifbu",
+  "customer_location",
+  "section_break_ihmw",
+  "sales_item",
+  "section_break_eacx",
+  "column_break_euhp",
+  "column_break_anwy",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qglu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "sale",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_location",
+   "fieldname": "customer_location",
+   "fieldtype": "Data",
+   "label": "Customer Location"
+  },
+  {
+   "default": "KSR Shops",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bpbq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tcea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fmhv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wcmo",
+   "fieldtype": "Column Break",
+   "placeholder": "Customer Location"
+  },
+  {
+   "fieldname": "column_break_ifbu",
+   "fieldtype": "Column Break",
+   "placeholder": "Customer Phone Number"
+  },
+  {
+   "fieldname": "section_break_ihmw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_item",
+   "fieldtype": "Table",
+   "label": "sales item",
+   "options": "sales item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_eacx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_euhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_anwy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fetch_from": "customer.customer_number",
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-15 11:52:25.598661",
+ "modified_by": "Administrator",
+ "module": "Salesapp",
+ "name": "sale",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
